@@ -11,6 +11,8 @@ namespace BookManager
         private int pages;
         private int wordCount;
 
+
+        //Em projeto chamar Book book = new Book (arg 1, arg 2)
         public Book(string title, string author)
         {
             this.title = title;
@@ -20,6 +22,12 @@ namespace BookManager
         //método com Lambda (=>) - simplifica retornos
         //Retorna um STRING correspondente ao valor da instância title da Classe
         public string GetTitle() => title;
+
+        public string GetAuthor() => author;
+
+        public int GetPages() => pages;
+
+        public int GetWordCount() => wordCount;
 
 
         //Este método é void porque está a especificar um valor da instância, não a retornar um valor
