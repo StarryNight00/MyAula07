@@ -4,12 +4,22 @@ using System.Text;
 
 namespace BookManager
 {
-    class Book
+    internal class Book
     {
         private string title;
         private string author;
         private int pages;
         private int wordCount;
+
+        private static int bookCount;
+
+        public static int GetBookCount() => bookCount;
+        
+        //Costrutor
+        static Book()
+        {
+            bookCount = 0;
+        }
 
 
         //Em projeto chamar Book book = new Book (arg 1, arg 2)
@@ -17,6 +27,7 @@ namespace BookManager
         {
             this.title = title;
             this.author = author;
+            bookCount++;
         }
 
         //método com Lambda (=>) - simplifica retornos
