@@ -36,6 +36,9 @@ namespace BookManager
                 //Criar um novo Book
                 //Guardar no array livros
                 livros[i] = new Book(inputT, inputA);
+
+                //Just for organization
+                Console.WriteLine();
             }
 
             //Para cada livro imprimir titulo, Length e autor
@@ -45,7 +48,7 @@ namespace BookManager
                 //Imprimir título e comprimento
                 Console.WriteLine();
                 Console.WriteLine($"Livro {i + 1}");
-                Console.WriteLine($"Título: {0} ({1})", livros[i].GetTitle(), livros[i].GetTitleLength());
+                Console.WriteLine($"Título: {livros[i].GetTitle()} ({livros[i].GetTitleLength()})");
 
                 //Imprimir autor
                 Console.WriteLine($"Autor: {livros[i].GetAuthor()}");
@@ -53,6 +56,7 @@ namespace BookManager
 
             Console.WriteLine();
             Console.WriteLine($"Número total de livros inseridos: {Book.GetBookCount()}");
+            Console.ReadLine();
 
         }
     }
