@@ -57,12 +57,13 @@ namespace ColorBalls
         }
 
         //Greyscale method
-        public int ColorGrayscale(int red, int blue, int green)
+        public int ColorGrayscale()
         {
-            int totalValue = red + blue + green;
+            int totalValue = red + green + blue;
             int grayscale = totalValue / 3;
 
             return grayscale;
+            //Numa linha:  return (int)((red + green + blue) / 3);
         }
 
         //'Sets' Group

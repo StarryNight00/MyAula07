@@ -8,11 +8,10 @@ namespace ColorBalls
     {
         private static int ballCount;
 
-        private int size;
-        private int radius;
-        private int color = new Color;
+        private float radius;
+        private Color color;
         private int thrownCount;
-        private int pi = (int)Math.PI;
+        private float pi = (float)Math.PI;
 
 
         //Constructor
@@ -21,9 +20,9 @@ namespace ColorBalls
             ballCount = 0;
         }
 
-        public Ball(int radius, int color)
+        public Ball(float radius, Color color)
         {
-            size = pi * (radius * radius);
+            this.radius = radius;
 
             this.color = color;
 
@@ -33,7 +32,7 @@ namespace ColorBalls
         }
 
         //'Sets' Group
-        public void SetRadius(int radius)
+        public void SetRadius(float radius)
         {
             if (radius > 0)
                 this.radius = radius;
@@ -46,12 +45,12 @@ namespace ColorBalls
         //Mathods
         public void Pop()
         {
-            size = 0;
+            radius = 0;
         }
 
         public void Throw()
         {
-            if (size > 0)
+            if (radius > 0)
             {
                 thrownCount++;
             }
