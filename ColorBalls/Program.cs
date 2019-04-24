@@ -28,7 +28,47 @@ namespace ColorBalls
             Ball ball5 = new Ball(23.456f, red);
 
             //methods
-            
+            ball1.Throw();
+            ball2.Throw();
+            ball3.Pop();
+            ball3.Throw();  //to verify if Pop is working correctly
+            ball4.Throw();
+            ball5.Throw();
+
+            ball1.Throw();
+            ball2.Throw();
+            ball4.Pop();
+            ball5.Throw();
+
+            ball1.Pop();
+            ball2.Throw();
+            ball5.Throw();
+            ball5.Throw();
+
+            ball2.Throw();
+            ball5.Pop();
+
+            ball2.Throw();
+            ball2.Pop();
+
+            //Final verification
+            Console.WriteLine("Vezes que cada bola foi atirada.");
+            Console.WriteLine("Para bola 1:");
+            Console.WriteLine(ball1.GetTimesThrown());
+            Console.WriteLine();
+            Console.WriteLine("Para bola 2:");
+            Console.WriteLine(ball2.GetTimesThrown());
+            Console.WriteLine();
+            Console.WriteLine("Para bola 3:");
+            Console.WriteLine(ball3.GetTimesThrown());
+            Console.WriteLine();
+            Console.WriteLine("Para bola 4:");
+            Console.WriteLine(ball4.GetTimesThrown());
+            Console.WriteLine();
+            Console.WriteLine("Para bola 5:");
+            Console.WriteLine(ball5.GetTimesThrown());
+
+
         }
     }
 }

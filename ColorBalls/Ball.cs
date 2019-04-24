@@ -11,7 +11,6 @@ namespace ColorBalls
         private float radius;
         private Color color;
         private int thrownCount;
-        private float pi = (float)Math.PI;
 
 
         //Constructor
@@ -42,7 +41,7 @@ namespace ColorBalls
         public int GetTimesThrown() => thrownCount;
 
 
-        //Mathods
+        //Methods
         public void Pop()
         {
             radius = 0;
